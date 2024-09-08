@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segundo Henao | Votaciones</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function actualizarDibujos() {
+      const grado = document.getElementById('grado').value;
+      const contenedor = document.getElementById('dibujo-container');
+
+      // Limpiar el contenedor
+      contenedor.innerHTML = '';
+
+      const dibujos = {
+        '6A': ['dibujo1.png', 'dibujo2.png', 'dibujo3.png', 'dibujo4.png', 'dibujo5.png', 'dibujo6.png'],
+        '6B': ['dibujo1.png', 'dibujo2.png', 'dibujo3.png', 'dibujo4.png', 'dibujo5.png', 'dibujo6.png'],
+        '7A': ['dibujo1.png', 'dibujo2.png', 'dibujo3.png', 'dibujo4.png', 'dibujo5.png', 'dibujo6.png'],
+        '8A': ['dibujo1.png', 'dibujo2.png', 'dibujo3.png', 'dibujo4.png', 'dibujo5.png', 'dibujo6.png'],
+        '9A': ['dibujo1.png', 'dibujo2.png', 'dibujo3.png', 'dibujo4.png', 'dibujo5.png', 'dibujo6.png'],
+        '10A': ['dibujo1.png', 'dibujo2.png', 'dibujo3.png', 'dibujo4.png', 'dibujo5.png', 'dibujo6.png'],
+        '11A': ['dibujo1.png', 'dibujo2.png', 'dibujo3.png', 'dibujo4.png', 'dibujo5.png', 'dibujo6.png'],
+      };
+
+      dibujos[grado].forEach(dibujo => {
+        const label = document.createElement('label');
+        label.innerHTML = `
+          <input type="radio" name="dibujo" value="${dibujo}" required>
+          <img src="images/${grado}/${dibujo}" alt="${dibujo}" class="thumbnail">
+        `;
+        contenedor.appendChild(label);
+      });
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="resultados.html">Resultados</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#contacto">???</a></li>
+    </ul>
+  </nav>  
+  <h1>Bienvenid@ al área de votación</h1>
+  <form action="votar.php" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre aqui" name="nombre" required><br>
+    
+    <label for="grado">Grado:</label>
+    <select id="grado" name="grado" onchange="actualizarDibujos()" required>
+      <option value="">Selecciona un grado</option>
+      <option value="6A">6A</option>
+      <option value="6B">6B</option>
+      <option value="7A">7A</option>
+      <option value="8A">8A</option>
+      <option value="9A">9A</option>
+      <option value="10A">10A</option>
+      <option value="11A">11A</option>
+    </select><br>
+    
+    <fieldset>
+      <legend>Selecciona un dibujo:</legend>
+      <div id="dibujo-container">
+        <!-- Las opciones de dibujos se llenarán aquí dinámicamente -->
+      </div>
+    </fieldset><br>
+    
+    <input type="submit" value="Votar">
+  </form>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Powered by JDigital Studios | All Rights Reserved &copy; 2024</p>
+
+      <ul>
+        <li><a href="#intro">Inicio</a></li>
+        <li><a href="#votacion">Resultados</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#contacto">???</a></li>
+      </ul>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+          <img src="facebook.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+          <img src="twitter.png" alt="Twitter">
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+          <img src="instagram.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+
+
+</body>
+</html>

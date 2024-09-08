@@ -1,0 +1,167 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilo del encabezado */
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  /* Estilo de las tablas */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  /* Estilo del contenedor de resultados */
+  #resultados-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo del pie de página */
+  .footer {
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  .navbar {
+    background-color: #F9F9F9;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    text-decoration: none;
+    color: #4CAF50;
+  }
+
+  /* Estilo del footer */
+.footer {
+  background-color: white;
+  color: black;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 85px; /* Ajustar si es necesario */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 12px; /* Tamaño de fuente reducido */
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  color: black;
+}
+
+.footer li {
+  display: inline;
+  margin: 0 8px; /* Espaciado reducido */
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #4CAF50;
+}
+
+.social-links {
+  margin: 10px 0;
+}
+
+.social-icon {
+  margin: 0 8px; /* Espaciado reducido */
+  display: inline-block;
+}
+
+.social-icon img {
+  width: 20px; /* Tamaño de icono reducido */
+  height: 20px; /* Tamaño de icono reducido */
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 12px;
+  }
+
+  .social-icon img {
+    width: 18px; /* Tamaño de icono reducido en móvil */
+    height: 18px; /* Tamaño de icono reducido en móvil */
+  }
+}
